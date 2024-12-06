@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(47, 44, 44);
+    height: 737px;
+    width: 226px;
+    padding: 0px;
+}
+.youtube_logo{
+    margin-top: -24px;
+    margin-left: 36px;
+    height: 23px;
+    width: 86px;
+}
+img{
+    padding-left: 8px;
+    height: 26px;
+    width: 26px;
+}
+.home{
+    padding-top: 15px;
+}
+.Hunger{
+    color: white;
+    margin-top: -23px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+.Subscription{
+    color: white;
+    font-size: 13px;
+    padding-left: 19px;
+    opacity: 0.6;
+}
+hr{
+    margin-top: 22px;
+    opacity: 0.2;
+    width: 85%;
+    margin-left: 10px;
+}
