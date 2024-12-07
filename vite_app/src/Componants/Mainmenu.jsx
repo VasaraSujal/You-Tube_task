@@ -59,16 +59,7 @@ function Mainmenu() {
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-8.png" alt="" /> <img className="img3" src={img23} alt="" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
 
                     <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-9.png" alt="" /> 
-
-                        {/* {data.map((i)=>(
-                            <>
-                                <img className='img2' src={i.img} />
-                            </>
-                        ))} */}
-
-
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%201%20(4).png" alt="" className="img3" /><p className="name">Infinix Note 12:<br />AMOLED</p><span className="name2">ATC Andriod TOTO Company</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">4.5Mviews . 2 days ago</span><p className="name"></p></div>
+                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-9.png" alt="" /><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%201%20(4).png" alt="" className="img3" /><p className="name">Infinix Note 12:<br />AMOLED</p><span className="name2">ATC Andriod TOTO Company</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">4.5Mviews . 2 days ago</span><p className="name"></p></div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-10.png" alt="" /> 
@@ -76,23 +67,24 @@ function Mainmenu() {
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-11.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(4).png" alt="" className="img3" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
+                        <p className="name new4">My Mix</p><span className="name2 new5">Lopamudra Mitra, Anupam Roy, and more</span>
+                        </div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-4.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(4).png" alt="" className="img3" /><p className="name">UX Design - What is it? (From Aj& Smart)</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
+                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(4).png" alt="" className="img3" /><p className="name">UX Design - What is it? (From Aj& Smart)</p><span className="name2">AJ & Smar</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><br /><span className="name2 new6">150Kviews . 3 years ago</span></div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-5.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(3).png" alt="" className="img3" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
+                        <p className="name new4">Mix - Mombati | Mohon Sharif | Dhakaiya| Mahib Ahsan ft Anika</p><span className="name2 new5">Mohon Sharif, Odd Signature, Shayan Chowdhury Arnob, and more</span></div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-6.png" alt="" /> 
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(5).png" alt="" className="img3" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
+                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(5).png" alt="" className="img3" /><p className="name"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 48 VISA-FREE</p><span className="name2">Nadir on the go</span><br /><span className="name2">1.7Mviews . 1 years ago</span></div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-7.png" alt="" /> 
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(6).png" alt="" className="img3" /><p className="name">14 Advanced Tips to Design FASTER in Fign-,a</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">53Kviews . 1 years ago</span></div>
+                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(6).png" alt="" className="img3" /><p className="name">14 Advanced Tips to Design FASTER in Fign-,a</p><span className="name2">Mizko</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><br /><span className="name2">53Kviews . 1 years ago</span></div>
 
                     <div className="items">
                         <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail.png" alt="" />
