@@ -22,12 +22,14 @@ import img17 from "../Img/ATC.png";
 function Sidebar() {
 
     const data = [
+        {img:img3, title:"Home"},
         {img:img4, title:"Explores"},
         {img:img5, title:"Shorts"},
         {img:img6, title:"subscription"}
     ];
 
     const data2 = [
+        {img:img7, title:"Library"},
         {img:img8, title:"History"},
         {img:img9, title:"Your Videos"},
         {img:img10, title:"Watch Later"},
@@ -36,6 +38,7 @@ function Sidebar() {
     ];
 
     const data3 = [
+        {img:img13, title:"Nadir On The Go"},
         {img:img14, title:"Coke Studio Bangla"},
         {img:img15, title:"MKBHD"},
         {img:img16, title:"Figma"},
@@ -52,15 +55,16 @@ function Sidebar() {
                 <img src={img1} alt="hamburger menu" />
                 <img className="youtube_logo" src={img2} alt="YouTube logo" /><br />
 
-                <img className="home" src={img3} alt="home icon" />
-                <p className="Hunger">Home</p>
 
-                {/* <img src={img4} alt="explore icon" />
+                {/* <img className="home" src={img3} alt="home icon" />
+                <p className="Hunger">Home</p>
+                <img src={img4} alt="explore icon" />
                 <p className="Hunger">Explores</p>
                 <img src={img5} alt="shorts icon" />
                 <p className="Hunger">Shorts</p>
                 <img src={img6} alt="subscription icon" />
                 <p className="Hunger">subscription</p> */}
+
 
                 {data.map((i)=>(
                     <>
@@ -73,10 +77,9 @@ function Sidebar() {
                 <hr />
 
 
-                <img src={img7} alt="library icon" />
+                {/* <img src={img7} alt="library icon" />
                 <p className="Hunger">Library</p>
-
-                {/* <img src={img8} alt="history icon" />
+                <img src={img8} alt="history icon" />
                 <p className="Hunger">History</p>
                 <img src={img9} alt="your videos icon" />
                 <p className="Hunger">Your Videos</p>
@@ -86,6 +89,7 @@ function Sidebar() {
                 <p className="Hunger">Liked Videos</p>
                 <img src={img12} alt="show more icon" />
                 <p className="Hunger">Show more</p> */}
+
 
                 {data2.map((i)=>(
                     <>
@@ -99,10 +103,8 @@ function Sidebar() {
 
                 <p className="Subscription">SUBSCRIPTION</p>
 
-                <img src={img13} alt="Nadir on the Go icon" />
+                {/* <img src={img13} alt="Nadir on the Go icon" />
                 <p className="Hunger">Nadir On The Go</p>
-
-{/* 
                 <img src={img14} alt="Coke Studio Bangla icon" />
                 <p className="Hunger">Coke Studio Bangla</p>
                 <img src={img15} alt="MKBHD icon" />
