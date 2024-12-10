@@ -52,7 +52,7 @@ function Sidebar() {
 
     const[photo , setphoto] = useState([]);
     useEffect ( ()  => {
-        fetch('http://localhost:3000/data')
+        fetch('https://api-krmy.onrender.com/data')
         .then((response)=> response.json())
         .then((data)=>setphoto(data))
         .catch((error)=>console.log(error));
@@ -60,7 +60,7 @@ function Sidebar() {
 
     const[photo2, setphoto2] = useState([]);
     useEffect ( ()  => {
-        fetch('http://localhost:3000/data2')
+        fetch('https://api-krmy.onrender.com/data2')
         .then((response)=> response.json())
         .then((data2)=>setphoto2(data2))
         .catch((error)=>console.log(error));
