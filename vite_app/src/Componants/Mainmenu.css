@@ -9,6 +9,7 @@
     margin-left: 440px;
     margin-top: -688px;
     width: 30%;
+    color: white;
 }
 .container{
     display: flex;
@@ -35,6 +36,7 @@ input{
     margin-top: -127px;
     height: 28px;
     width: 52px;
+    color: white;
 }
 .create{
     margin-left: 1257px;

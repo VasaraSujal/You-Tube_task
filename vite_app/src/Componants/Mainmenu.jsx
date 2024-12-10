@@ -1,4 +1,6 @@
-import './Mainmenu.css'
+
+import React, { useState, useEffect } from "react";
+import "./Mainmenu.css";
 import img18 from "../Img/search.png";
 import img19 from "../Img/mic.png";
 import img20 from "../Img/create.png";
@@ -6,120 +8,106 @@ import img21 from "../Img/bell.png";
 import img22 from "../Img/more.png";
 import img23 from "../Img/Coke.png";
 
-
+const API_KEY = "AIzaSyBubDBOcL6ZjX6ClWh_33qWXpIg8wHsKAU";
 
 function Mainmenu() {
+  const [videos, setVideos] = useState([]);
+  const [query, setQuery] = useState("music");
 
-    return (
+  // Fetch videos based on the query
+  const fetchVideos = (searchQuery) => {
+    const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&type=video&maxResults=12&q=${searchQuery}`;
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        setVideos(data.items);
+      })
+      .catch((error) => console.error("Error fetching YouTube data:", error));
+  };
 
-        <>
+  useEffect(() => {
+    fetchVideos(query);
+  }, [query]);
 
-            <div className="container3">
-                <input className="search" type="text" placeholder="Search" />
-                <div className="search1">
-                    <img src={img18} alt="" />
-                </div>
-                <div className="mic">
-                    <img src={img19} alt="" />
-                </div>
-                <div className="create">
-                    <img src={img20} alt="" />
-                </div>
-                <div className="bell">
-                    <img src={img21} alt="" />
-                </div>
-                <div className="more">
-                    <img src={img22} alt="" />
-                </div>
-                <div className="profile">
-                    <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%201%20(2).png" alt="" />
-                </div>
+  const handleSearch = () => {
+    const searchInput = document.querySelector(".search").value;
+    if (searchInput) {
+      setQuery(searchInput);
+    }
+  };
 
-                <hr className="new" />
+  return (
+    <>
+      <div className="container3">
+        <input
+          className="search"
+          type="text"
+          placeholder="Search"
+        />
+        <div className="search1" onClick={handleSearch}>
+          <img src={img18} alt="Search Icon" />
+        </div>
+        <div className="mic">
+          <img src={img19} alt="Mic Icon" />
+        </div>
+        <div className="create">
+          <img src={img20} alt="Create Icon" />
+        </div>
+        <div className="bell">
+          <img src={img21} alt="Bell Icon" />
+        </div>
+        <div className="more">
+          <img src={img22} alt="More Icon" />
+        </div>
+        <div className="profile">
+          <img
+            src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%201%20(2).png"
+            alt="Profile"
+          />
+        </div>
 
-                <div className="container4">
-                    <div className="child new3">All</div>
-                    <div className="child">coke studio</div>
-                    <div className="child">UX</div>
-                    <div className="child"> Case study</div>
-                    <div className="child">Music</div>
-                    <div className="child">bnagla lofi</div>
-                    <div className="child">Tour</div>
-                    <div className="child">Saintmartin</div>
-                    <div className="child">Tech</div>
-                    <div className="child">iphone 13</div>
-                    <div className="child">User Interface Design</div>
-                    <div className="child">computer</div>
-                </div>
+        <hr className="new" />
 
-                <hr className="new2" />
+        <div className="container4">
+          <div className="child new3">All</div>
+          <div className="child">Coke Studio</div>
+          <div className="child">UX</div>
+          <div className="child">Case Study</div>
+          <div className="child">Music</div>
+          <div className="child">Bangla Lofi</div>
+          <div className="child">Tour</div>
+          <div className="child">Saint Martin</div>
+          <div className="child">Tech</div>
+          <div className="child">iPhone 13</div>
+          <div className="child">User Interface Design</div>
+          <div className="child">Computer</div>
+        </div>
 
-                <div className="container2">
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-8.png" alt="" /> <img className="img3" src={img23} alt="" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
+        <hr className="new2" />
 
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-9.png" alt="" /><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%201%20(4).png" alt="" className="img3" /><p className="name">Infinix Note 12:<br />AMOLED</p><span className="name2">ATC Andriod TOTO Company</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">4.5Mviews . 2 days ago</span><p className="name"></p></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-10.png" alt="" /> 
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(3).png" alt="" className="img3" /><p className="name">My First Ux Design case study-<br /> This got me my first job</p><span id="name3" className="name2">Saptarshi Prakash</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" />&nbsp;&nbsp;&nbsp;<span id="name2" className="name2">4.8Kviews .1 years ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-11.png" alt="" />
-                        <p className="name new4">My Mix</p><span className="name2 new5">Lopamudra Mitra, Anupam Roy, and more</span>
-                        </div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-4.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(4).png" alt="" className="img3" /><p className="name">UX Design - What is it? (From Aj& Smart)</p><span className="name2">AJ & Smar</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><br /><span className="name2 new6">150Kviews . 3 years ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-5.png" alt="" />
-                        <p className="name new4">Mix - Mombati | Mohon Sharif | Dhakaiya| Mahib Ahsan ft Anika</p><span className="name2 new5">Mohon Sharif, Odd Signature, Shayan Chowdhury Arnob, and more</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-6.png" alt="" /> 
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(5).png" alt="" className="img3" /><p className="name"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 48 VISA-FREE</p><span className="name2">Nadir on the go</span><br /><span className="name2">1.7Mviews . 1 years ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-7.png" alt="" /> 
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(6).png" alt="" className="img3" /><p className="name">14 Advanced Tips to Design FASTER in Fign-,a</p><span className="name2">Mizko</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><br /><span className="name2">53Kviews . 1 years ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(4).png" alt="" className="img3" /><p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p><span className="name2">Coke studio bangla</span><img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" /><span className="name2">1.5Mviews . 2 days ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-1.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(3).png" alt="" className="img3" />
-                        <p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p>
-                        <span className="name2">Coke studio bangla</span>
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" />
-                        <span className="name2">1.5Mviews . 2 days ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-2.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(5).png" alt="" className="img3" />
-                        <p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p>
-                        <span className="name2">Coke studio bangla</span>
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" />
-                        <span className="name2">1.5Mviews . 2 days ago</span></div>
-
-                    <div className="items">
-                        <img className="img2" src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Thumbnail-3.png" alt="" />
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/Ellipse%204%20(6).png" alt="" className="img3" />
-                        <p className="name">Bulbuli | Coke Studio Bangla | Season one | Ritu Raj X Nandita</p>
-                        <span className="name2">Coke studio bangla</span>
-                        <img src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png" alt="" className="img4" />
-                        <span className="name2">1.5Mviews . 2 days ago</span></div>
-                </div>
+        <div className="container2">
+          {videos.map((video) => (
+            <div className="items" key={video.id.videoId}>
+              <img
+                className="img2"
+                src={video.snippet.thumbnails.medium.url}
+                alt={video.snippet.title}
+              />
+              <img className="img3" src={img23} alt="Channel Icon" />
+              <p className="name">{video.snippet.title}</p>
+              <span className="name2">{video.snippet.channelTitle}</span>
+              <img
+                src="https://raw.githubusercontent.com/PatelNeelMahesh/frontend_tasks/refs/heads/main/02.youtube-clone/assets/verified.png"
+                alt="Verified"
+                className="img4"
+              />
+              <span className="name2">1M views . 1 day ago</span>
             </div>
-
-        </>
-
-    )
-
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Mainmenu
+export default Mainmenu;
