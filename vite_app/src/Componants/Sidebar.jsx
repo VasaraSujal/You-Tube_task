@@ -12,11 +12,11 @@ import img2 from "../Img/Youtube logo.png";
 // import img10 from "../Img/watch_later.png";
 // import img11 from "../Img/liked.png";
 // import img12 from "../Img/down_arrow.png";
-// import img13 from "../Img/Nadir.png";
-// import img14 from "../Img/Coke.png";
-// import img15 from "../Img/MKBHD.png";
-// import img16 from "../Img/Figma.png";
-// import img17 from "../Img/ATC.png";
+import img13 from "../Img/Nadir.png";
+import img14 from "../Img/Coke.png";
+import img15 from "../Img/MKBHD.png";
+import img16 from "../Img/Figma.png";
+import img17 from "../Img/ATC.png";
 // import { response } from 'express';
 // import { data } from '../server.js';
 
@@ -40,14 +40,14 @@ function Sidebar() {
     //     {img:img12, title:"Show more"}
     // ];
 
-    // const data3 = [
-    //     {img:img13, title:"Nadir On The Go"},
-    //     {img:img14, title:"Coke Studio Bangla"},
-    //     {img:img15, title:"MKBHD"},
-    //     {img:img16, title:"Figma"},
-    //     {img:img17, title:"Android ToTo C..."},
-    //     {img:"https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(5).png?raw=true", title:"AI ux.com"}
-    // ];
+    const data3 = [
+        {img:img13, title:"Nadir On The Go"},
+        {img:img14, title:"Coke Studio Bangla"},
+        {img:img15, title:"MKBHD"},
+        {img:img16, title:"Figma"},
+        {img:img17, title:"Android ToTo C..."},
+        {img:"https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(5).png?raw=true", title:"AI ux.com"}
+    ];
 
 
     const[photo , setphoto] = useState([]);
@@ -137,12 +137,12 @@ function Sidebar() {
                 <p className="Hunger">AI ux.com</p> */}
                 
 
-                {/* {data3.map((i)=>(
+                {data3.map((i)=>(
                     <>
                         <img src={i.img} alt="" />
                         <p className="Hunger">{i.title}</p>
                     </>
-                ))} */}
+                ))}
 
 
             </div>
