@@ -1,50 +1,70 @@
 import './Sidebar.css'
+import React,{useState , useEffect} from 'react';
 import img1 from "../Img/hambarger.png";
 import img2 from "../Img/Youtube logo.png";
-import img3 from "../Img/home.png";
-import img4 from "../Img/explore.png";
-import img5 from "../Img/shorts.png";
-import img6 from "../Img/subscription.png";
-import img7 from "../Img/library.png";
-import img8 from "../Img/history.png";
-import img9 from "../Img/your_video.png";
-import img10 from "../Img/watch_later.png";
-import img11 from "../Img/liked.png";
-import img12 from "../Img/down_arrow.png";
-import img13 from "../Img/Nadir.png";
-import img14 from "../Img/Coke.png";
-import img15 from "../Img/MKBHD.png";
-import img16 from "../Img/Figma.png";
-import img17 from "../Img/ATC.png";
+// import img3 from "../Img/home.png";
+// import img4 from "../Img/explore.png";
+// import img5 from "../Img/shorts.png";
+// import img6 from "../Img/subscription.png";
+// import img7 from "../Img/library.png";
+// import img8 from "../Img/history.png";
+// import img9 from "../Img/your_video.png";
+// import img10 from "../Img/watch_later.png";
+// import img11 from "../Img/liked.png";
+// import img12 from "../Img/down_arrow.png";
+// import img13 from "../Img/Nadir.png";
+// import img14 from "../Img/Coke.png";
+// import img15 from "../Img/MKBHD.png";
+// import img16 from "../Img/Figma.png";
+// import img17 from "../Img/ATC.png";
+// import { response } from 'express';
+// import { data } from '../server.js';
 
 
 
 function Sidebar() {
 
-    const data = [
-        {img:img3, title:"Home"},
-        {img:img4, title:"Explores"},
-        {img:img5, title:"Shorts"},
-        {img:img6, title:"subscription"}
-    ];
+    // const data = [
+    //     {img:img3, title:"Home"},
+    //     {img:img4, title:"Explores"},
+    //     {img:img5, title:"Shorts"},
+    //     {img:img6, title:"subscription"}
+    // ];
 
-    const data2 = [
-        {img:img7, title:"Library"},
-        {img:img8, title:"History"},
-        {img:img9, title:"Your Videos"},
-        {img:img10, title:"Watch Later"},
-        {img:img11, title:"Liked Videos"},
-        {img:img12, title:"Show more"}
-    ];
+    // const data2 = [
+    //     {img:img7, title:"Library"},
+    //     {img:img8, title:"History"},
+    //     {img:img9, title:"Your Videos"},
+    //     {img:img10, title:"Watch Later"},
+    //     {img:img11, title:"Liked Videos"},
+    //     {img:img12, title:"Show more"}
+    // ];
 
-    const data3 = [
-        {img:img13, title:"Nadir On The Go"},
-        {img:img14, title:"Coke Studio Bangla"},
-        {img:img15, title:"MKBHD"},
-        {img:img16, title:"Figma"},
-        {img:img17, title:"Android ToTo C..."},
-        {img:"https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(5).png?raw=true", title:"AI ux.com"}
-    ];
+    // const data3 = [
+    //     {img:img13, title:"Nadir On The Go"},
+    //     {img:img14, title:"Coke Studio Bangla"},
+    //     {img:img15, title:"MKBHD"},
+    //     {img:img16, title:"Figma"},
+    //     {img:img17, title:"Android ToTo C..."},
+    //     {img:"https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(5).png?raw=true", title:"AI ux.com"}
+    // ];
+
+
+    const[photo , setphoto] = useState([]);
+    useEffect ( ()  => {
+        fetch('http://localhost:3000/data')
+        .then((response)=> response.json())
+        .then((data)=>setphoto(data))
+        .catch((error)=>console.log(error));
+    });
+
+    const[photo2, setphoto2] = useState([]);
+    useEffect ( ()  => {
+        fetch('http://localhost:3000/data2')
+        .then((response)=> response.json())
+        .then((data2)=>setphoto2(data2))
+        .catch((error)=>console.log(error));
+    });
 
 
     return (
@@ -66,7 +86,7 @@ function Sidebar() {
                 <p className="Hunger">subscription</p> */}
 
 
-                {data.map((i)=>(
+                {photo.map((i)=>(
                     <>
                     <img src={i.img} alt="" />
                     <p className="Hunger">{i.title}</p>
@@ -91,7 +111,7 @@ function Sidebar() {
                 <p className="Hunger">Show more</p> */}
 
 
-                {data2.map((i)=>(
+                {photo2.map((i)=>(
                     <>
                         <img src={i.img} alt="" />
                         <p className="Hunger">{i.title}</p>
@@ -117,12 +137,12 @@ function Sidebar() {
                 <p className="Hunger">AI ux.com</p> */}
                 
 
-                {data3.map((i)=>(
+                {/* {data3.map((i)=>(
                     <>
                         <img src={i.img} alt="" />
                         <p className="Hunger">{i.title}</p>
                     </>
-                ))}
+                ))} */}
 
 
             </div>
