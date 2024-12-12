@@ -28,11 +28,11 @@ input{
     height: 25px;
 }
 .mic{
-    margin-left: 891px;
+    margin-left: 900px;
     margin-top: -27px;
 }
 .search1{
-    margin-left: 855px;
+    margin-left: 867px;
     margin-top: -127px;
     height: 28px;
     width: 52px;
@@ -144,3 +144,7 @@ input{
 .new6{
     margin-left: 3.8vw;
 }
+/* 
+#extra{
+    margin-left: 150px;
+} */

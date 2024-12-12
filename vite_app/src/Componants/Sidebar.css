@@ -31,7 +31,13 @@ img{
     margin-top: -23px;
     margin-left: 50px;
     font-size: 15px;
+    cursor: pointer;
+    /* padding: 5px 5px; */
 }
+/* .Hunger:hover{
+    
+} */
+
 .Subscription{
     color: white;
     font-size: 13px;
@@ -43,4 +49,11 @@ hr{
     opacity: 0.2;
     width: 85%;
     margin-left: 10px;
+}
+.new7{
+    height: 4vh;
+    padding: 4px 0px;
+}
+.new7:hover{
+    background-color: rgba(128, 128, 128, 0.585);
 }
